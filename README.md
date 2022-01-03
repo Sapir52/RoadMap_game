@@ -24,3 +24,6 @@ This project is an actually Road map.
 The user can set the map properties (number and color of vehicles, map type, etc.)
 
 On screen will be vehicle images and a road map.
+
+# Run:
+gui/Main.java
