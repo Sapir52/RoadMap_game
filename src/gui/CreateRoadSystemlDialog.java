@@ -7,21 +7,21 @@ import java.awt.event.*;
 public class CreateRoadSystemlDialog extends JDialog  implements  ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JPanel p1,p2;
-    private JButton ok, cancel;
-    private JLabel lbl_sz, lbl_hor;
-    private JSlider sl_sz, sl_hor;
-    private RoadSystemPanel rs;
-	 /**
+	private JButton ok, cancel;
+	private JLabel lbl_sz, lbl_hor;
+	private JSlider sl_sz, sl_hor;
+	private RoadSystemPanel rs;
+	/**
 	  * 
 	  * @param parent
 	  * @param pan
 	  * @param title
 	  */
-    public CreateRoadSystemlDialog(Main parent, RoadSystemPanel pan, String title) {
-    	super((Main)parent,title,true);
-    	rs = pan;
+	public CreateRoadSystemlDialog(Main parent, RoadSystemPanel pan, String title) {
+		super((Main)parent,title,true);
+		rs = pan;
 
-    	setSize(600,300);
+		setSize(600,300);
 	
 		setBackground(new Color(100,230,255));
 		p1 = new JPanel();
@@ -60,14 +60,14 @@ public class CreateRoadSystemlDialog extends JDialog  implements  ActionListener
 		setLayout(new BorderLayout());
 		add("North" , p1);
 		add("South" , p2);
-    }
+	}
     
     
 	/**
 	 * 
 	 * @return sl_sz - type JSlider
 	 */
-    public JSlider getSl_sz() {
+	public JSlider getSl_sz() {
 		return sl_sz;
 	}
 
@@ -81,19 +81,15 @@ public class CreateRoadSystemlDialog extends JDialog  implements  ActionListener
 	}
 
 
-/**
- *@param ActionEvent e
- */
+	/**
+	 *@param ActionEvent e
+	 */
 	public void actionPerformed(ActionEvent e) {
  		if(e.getSource() == ok){
-		    rs.createNewRoadSystem(sl_sz.getValue(),sl_hor.getValue());
-		    setVisible(false);
+			rs.createNewRoadSystem(sl_sz.getValue(),sl_hor.getValue());
+		        setVisible(false);
 		}
 		else 
-		    setVisible(false);
-    }
-
-
-    
-    
+		        setVisible(false);
+    	}
 }
